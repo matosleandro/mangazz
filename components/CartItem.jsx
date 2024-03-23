@@ -2,21 +2,26 @@ import { urlFor } from '@/app/lib/sanity';
 import Image from 'next/image';
 import { useShoppingCart } from 'use-shopping-cart';
 import { FaPlus, FaMinus, FaX } from 'react-icons/fa6'
+import { Images } from 'lucide-react';
 
-const CartItem = ({item}) => {
+const CartItem = ({ item }) => {
   const { removeItem, incrementItem, decrementItem } = useShoppingCart();
   return (
     <div className='flex w-full justify-between mb-4 items-center h-[120px] border-b'>
       {/* image */}
-      <div className='w-[100px] h-[100px] relative'>
+      <div className='w-[110px] h-[110px] relative'>
+      {item.images && item.images.length > 0 ? (
         <Image
           src={urlFor(item.images[0]).url()}
           fill
           priority
-          sizes='(max-width: 100px) 100px, 100px'
+          sizes='(max-width: 110px) 110px, 110px'
           className='object-contain'
           alt=''
         />
+      ) : (
+        <p>No image availiable</p>
+      )}
       </div>
       {/* name, price, quantity, remove */}
       <div className='w-full max-w-[180px] flex flex-col justify-center gap-4'>

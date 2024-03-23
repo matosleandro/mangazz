@@ -53,7 +53,16 @@ const ProductDetails = async ({params}) => {
               <p className='text-lg font-semibold'>R$ {manga.price}</p>
             </div>
               <p>{manga.description}</p>
-              <AddToCartBtn text='Add to cart' btnStyles='btn btn-accent' />
+              <AddToCartBtn 
+               price_id={manga.price_id}
+               name={manga.name}
+               currency='BRL'
+               description={manga.description}
+               images={manga.images}
+               price={manga.price}
+               text='Add to cart'
+               btnStyles='btn btn-accent' 
+              />
           </div>
           {/* info */}
           <div className='flex flex-col gap-3'>

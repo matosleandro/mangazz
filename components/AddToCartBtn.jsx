@@ -1,16 +1,17 @@
-import React from 'react';
+'use client'
+
 import { useShoppingCart } from 'use-shopping-cart';
 import { useToast } from './ui/use-toast';
 
-const AddToCartBtn = ({ 
-  btnStyles, 
-  text, 
-  icon, 
-  id, 
-  currency, 
-  name, 
-  description, 
-  images, 
+const AddToCartBtn = ({
+  btnStyles,
+  text,
+  icon,
+  id,
+  currency,
+  name,
+  description,
+  images,
   price,
   price_id,
 }) => {

@@ -22,7 +22,6 @@ const getData = async () => {
 
 const PopularMangas = async () => {
     const mangas = await getData();
-    console.log(mangas);
     return (
         <section className='py-24'>
             <div className='container mx-auto'>
