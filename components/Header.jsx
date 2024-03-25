@@ -1,10 +1,10 @@
 'use client';
 
-import Link from "next/link";
-import Nav from "./Nav";
-import CartSidebar from "./CartSidebar";
-import { CgShoppingBag } from "react-icons/cg";
-import { useShoppingCart } from "use-shopping-cart";
+import Link from 'next/link';
+import Nav from './Nav';
+import CartSidebar from './CartSidebar';
+import { CgShoppingBag } from 'react-icons/cg';
+import { useShoppingCart } from 'use-shopping-cart';
 
 const Header = () => {
   const { cartCount, handleCartClick } = useShoppingCart();
@@ -16,7 +16,7 @@ const Header = () => {
             <span className='text-accent'>I</span>loveMangás
           </h1>
         </Link>
-        <div>
+        <div className='flex items-center gap-[26px]'>
           <Nav containerStyles='flex gap-[36px]' />
           <div onClick={() => handleCartClick()} className='relative cursor-pointer'>
             <CgShoppingBag className='text-[26px]' />

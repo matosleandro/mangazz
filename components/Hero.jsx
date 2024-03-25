@@ -9,10 +9,10 @@ const Hero = () => {
           {/* text */}
           <div className='w-full xl:max-w-[580px] md:h-[820px] flex flex-col justify-center items-start'>
             <h1 className='text-center xl:text-left mb-6'>
-              Where <span>Joyful</span> Manga Begin
+              Where <span>Reading</span> Mangá Begin
             </h1>
             <p className='mb-10 text-lg max-w-[508px] mx-auto text-center xl:text-left xl:mx-0'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, debitis libero expedita quo vitae mollitia! Qui rerum quibusdam ex maxime libero dicta nam illum! Deleniti quod eaque magnam nam doloribus!
+              The world of manga invites you on an epic journey, filled with adventures, romances, and reflections. But where to start? Don't worry, we're here to guide you on this first step!
             </p>
             {/* btn group */}
             <div className='flex items-center gap-4 mx-auto xl:mx-0'>
@@ -28,8 +28,8 @@ const Hero = () => {
           <div className='hidden xl:flex'>
             <Image 
               src='/hero/hero.png' 
-              width={350}
-              height={500}
+              width={300}
+              height={400}
               alt=''
               quality={100}
             />

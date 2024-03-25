@@ -10,13 +10,13 @@ const CheckoutBtn = () => {
     } catch (error) {
       console.log(error);
     }
-  }
-  const {redirectToCheckout} = useShoppingCart()
+  };
+  const { redirectToCheckout } = useShoppingCart();
   return ( 
     <button className='btn btn-primary w-full' onClick={handleCheckout}>
       Proceed to checkout
-    </button>)
-  ;
+    </button>
+  );
 };
 
 export default CheckoutBtn;
