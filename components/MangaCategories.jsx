@@ -29,7 +29,7 @@ const MangaCategories = ({mangas}) => {
         <div className='container mx-auto'>
             <div className='flex flex-col'>
                 {/* sidebar */}
-                <aside className='bg-yellow-100 w-full p-4 mb-8 xl:w-[300px] xl:h-[84vh] xl:fixed'>
+                <aside className='w-full p-4 mb-8 xl:w-[300px] xl:h-[84vh] xl:fixed'>
                     <RadioGroup
                         defaultValue='all' 
                         className='flex flex-col gap-6 mb-12'
@@ -121,11 +121,11 @@ const MangaCategories = ({mangas}) => {
                             Max Price: {' '}
                             <span className='text-accent font-semibold ml-2'>R$ {price}</span>
                             <span className='ml-2'>
-                              {filteredMangas.length > 1
+                              ({filteredMangas.length > 1
                                 ? `${filteredMangas.length} items`
                                 : filteredMangas === 0
                                 ? `${filteredMangas.length} items`
-                                : `${filteredMangas.length} item` }
+                                : `${filteredMangas.length} item` })
                             </span>
                         </div>
                         <Slider 
@@ -137,7 +137,13 @@ const MangaCategories = ({mangas}) => {
                     </div>
                 </aside>
                 {/* manga list */}
-                <div className='bg-blue-300 w-full xl:w-[1050px] ml-auto'>manga list</div>
+                <div className='w-full xl:w-[1050px] ml-auto'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[30px]'>
+                        {filteredMangas.map(manga => {
+                        return <Manga manga={manga} key={manga.price_id} />
+                        })}
+                    </div>
+                </div>
             </div>
         </div>
     </section>;
